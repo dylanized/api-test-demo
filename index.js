@@ -9,4 +9,8 @@ app.post('/', function (req, res) {
   res.json({ foo: "bar" });
 });
 
-app.listen(3000);
+const instance = app.listen(3000);
+
+app.close = () => instance.close();
+
+module.exports = app;

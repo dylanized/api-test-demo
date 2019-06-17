@@ -1,8 +1,10 @@
 const test = require('unit.js');
 
+const api = require('./index');
+
 describe('example test suite', function() {
   it(`testing get response`, function(done) {
-    test.httpAgent('http://localhost:3000')
+    test.httpAgent(api)
       .get('/')
       .expect(200)
       .end(function(err, res) {
@@ -12,7 +14,7 @@ describe('example test suite', function() {
       });
     });
     it(`testing post response`, function(done) {
-      test.httpAgent('http://localhost:3000')
+      test.httpAgent(api)
         .post('/')
         .expect(200)
         .end(function(err, res) {
@@ -21,4 +23,8 @@ describe('example test suite', function() {
           done();
         });
       });
+    after(function(done) {
+      api.close();
+      done();
+    });
 });
