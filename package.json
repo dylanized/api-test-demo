@@ -1,0 +1,27 @@
+{
+  "name": "mocha-api-demo",
+  "version": "1.0.0",
+  "description": "example of Mocha testing an Express API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanized/api-test-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanized/api-test-demo/issues"
+  },
+  "homepage": "https://github.com/dylanized/api-test-demo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "unit.js": "^2.1.0"
+  }
+}
